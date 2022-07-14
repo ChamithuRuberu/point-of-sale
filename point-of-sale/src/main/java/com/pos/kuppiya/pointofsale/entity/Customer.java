@@ -1,11 +1,9 @@
 package com.pos.kuppiya.pointofsale.entity;
 
-import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.vladmihalcea.hibernate.type.json.JsonType;
 import org.hibernate.annotations.Type;
 import org.hibernate.annotations.TypeDef;
 import org.hibernate.annotations.TypeDefs;
-import org.springframework.web.bind.annotation.CookieValue;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -21,7 +19,7 @@ import java.util.ArrayList;
         @TypeDef(name = "json",typeClass = JsonType.class)
 })
 
-public class customer
+public class Customer
 {
  // create customer id...
     @Id
@@ -56,7 +54,7 @@ public class customer
 
 
 // create no arg constructor...
-    public customer()
+    public Customer()
     {
 
     }
@@ -133,7 +131,7 @@ public class customer
     }
 
     // create full arg constructor......
-    public customer(int customer, String customerName, String customeradress, double customersalary, ArrayList contactnumber, String nic, boolean activestate) {
+    public Customer(int customer, String customerName, String customeradress, double customersalary, ArrayList contactnumber, String nic, boolean activestate) {
         this.customer = customer;
         this.customerName = customerName;
         this.customeradress = customeradress;
